@@ -10,6 +10,12 @@ jobs:
   CI:
     name: 🧪 Tests And Analyze
     runs-on: ubuntu-latest
+    env:
+      HOST: ${{ secrets.HOST }}
+      PORT: ${{ secrets.PORT }}
+      DEBUG: ${{ secrets.DEBUG }}
+      TMDB_TOKEN: ${{ secrets.TMDB_TOKEN }}
+      TMBD_API_BASE: ${{secrets.TMBD_API_BASE}}
     steps:
       - name: ⬇️ Checkout repository
         uses: actions/checkout@v2
